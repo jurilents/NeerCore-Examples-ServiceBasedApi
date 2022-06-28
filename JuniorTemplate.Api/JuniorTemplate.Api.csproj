@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+	  <DocumentationFile>bin\Debug\JuniorTemplate.Api.xml</DocumentationFile>
+	  <NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+	  <DocumentationFile>bin\Release\JuniorTemplate.Api.xml</DocumentationFile>
+	  <NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\JuniorTemplate.Infrastructure\JuniorTemplate.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="appsettings.Development.json">
+	    <DependentUpon>appsettings.json</DependentUpon>
+	  </Content>
+	  <Content Update="appsettings.Secrets.json">
+	    <DependentUpon>appsettings.json</DependentUpon>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="NeerCore.Api" Version="1.0.0-beta2" />
+	</ItemGroup>
+
+</Project>
