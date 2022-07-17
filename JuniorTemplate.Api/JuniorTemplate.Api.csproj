@@ -30,7 +30,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="NeerCore.Api" Version="1.0.2" />
+	  <PackageReference Include="NeerCore.Api" Version="1.1.1" />
 	</ItemGroup>
 
 </Project>

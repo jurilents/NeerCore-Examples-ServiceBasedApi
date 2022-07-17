@@ -9,7 +9,7 @@ using Sieve.Services;
 
 namespace JuniorTemplate.Infrastructure.Services;
 
-[Inject]
+[Injectable]
 public class TeasService : ITeasService
 {
 	private readonly IDatabaseContext _database;
