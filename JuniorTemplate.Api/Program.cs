@@ -4,9 +4,11 @@ using JuniorTemplate.Infrastructure;
 using NeerCore.Api;
 using NeerCore.Api.Extensions;
 using NeerCore.Api.Extensions.Swagger;
+using NeerCore.Logging;
+using NeerCore.Logging.Extensions;
 using NLog;
 
-var logger = LoggerInstaller.InitDefault();
+var logger = LoggerInstaller.InitFromCurrentEnvironment();
 
 try
 {
@@ -32,11 +34,14 @@ finally
 
 static void ConfigureBuilder(WebApplicationBuilder builder)
 {
+    builder.Logging.AddNLogAsDefault();
+
     builder.Services.AddSqlServerDatabase();
     builder.Services.AddApplication(builder.Configuration);
     builder.Services.AddInfrastructure();
 
-    builder.AddNeerApi();
+    builder.Services.AddNeerApiServices();
+    builder.Services.AddNeerControllers();
 }
 
 static void ConfigureWebApp(WebApplication app)
