@@ -34,7 +34,7 @@ finally
 
 static void ConfigureBuilder(WebApplicationBuilder builder)
 {
-    builder.Logging.AddNLogAsDefault();
+    builder.Logging.ConfigureNLogAsDefault();
 
     builder.Services.AddSqlServerDatabase();
     builder.Services.AddApplication(builder.Configuration);

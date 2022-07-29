@@ -22,7 +22,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="FluentValidation" Version="11.1.0" />
-	  <PackageReference Include="NeerCore.Mapping.Mapster" Version="1.3.1" />
+	  <PackageReference Include="NeerCore.Mapping.Mapster" Version="1.4.0" />
 	</ItemGroup>
 
 </Project>
