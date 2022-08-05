@@ -3,7 +3,7 @@ using Sieve.Attributes;
 
 namespace JuniorTemplate.Data.Entities;
 
-public class Tea : IDatedEntity<Guid>
+public class Tea : IDateableEntity<Guid>
 {
 	[Sieve(CanFilter = true, CanSort = true)]
 	public Guid Id { get; init; } = Guid.NewGuid();
