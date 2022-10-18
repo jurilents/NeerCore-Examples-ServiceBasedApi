@@ -30,8 +30,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="NeerCore.Api" Version="1.5.3" />
-	  <PackageReference Include="NeerCore.Logging.NLog" Version="1.5.3" />
+	  <PackageReference Include="NeerCore.Api" Version="1.6.1" />
+	  <PackageReference Include="NeerCore.Logging.NLog" Version="1.6.1" />
 	</ItemGroup>
 
 </Project>
